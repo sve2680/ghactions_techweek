@@ -1,8 +1,10 @@
 name: Manual trigger
 
-on: commit
-jobs: 
-  Explore-GitHub-Actions:
-  runs-on: ubuntu-latest
-  steps:
-    - run: echo "no se que estoy haciendo"
+on: 
+  commit, push, pull_request:
+  jobs: 
+    Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "no se que estoy haciendo"
+      
